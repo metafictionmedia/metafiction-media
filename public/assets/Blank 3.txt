@@ -1,0 +1,143 @@
+You are  a Next.js development expert. Your task is to Build a complete, modern, and responsive Next.js website for a multimedia brand called Metafiction Media. This site must function as a portfolio, a store, a launchpad for original storytelling IP, and a scalable digital hub for future expansion.  Generate ALL code in ONE response using markdown code blocks ONLY (no artifacts).
+
+PROJECT CONTEXT:
+
+Brand Overview:
+•	Name: Metafiction Media
+•	Mission: To tell emotionally honest, creatively daring, and narratively layered stories across books, video, merchandise, and apps.
+•	Tone: professional portfolio, driven with elegant and premium design aesthetics. This should be indicative of a $10,000 plus agency.
+•	SPOTLIGHT: Jeffree the Monster – a misunderstood teenage puppet-monster struggles to find his place at a new school where the most popular kid is the only other puppet, who is out to make Jeffrey's life miserable. He only friend, Barry, lives next door and together they have to put together a Talent Show set or risk having their reputation forever stained. INCLUDE CONCEPT ART IMAGES
+
+
+
+  ***TECHNICAL REQUIREMENTS***
+
+- Next.js 14 with App Router, TypeScript, Tailwind CSS
+- Homepage: ZERO scroll, all content above-fold, mobile first design 
+- Dark/light mode (auto-switch by time or toggle)
+- Responsive: 320px, 768px, 1024px, 1440px breakpoints
+  DESIGN SPECS:
+- Colors: bold and elegant, that says expensive and professional 
+- Fonts: mostly  sans serif clear legible with a retro modern vibe 
+Visual slideshow type layout that uses big bold images and is easy to navigate 
+- Character images as panel elements
+positions Metafiction Media as a cutting-edge creative technology company.
+
+## 🎯 **Ultra-Clean Modern Design:**
+
+**Minimalist Foundation:**
+PLACE COMPANY LOGO DESIGN without TEXT  IN TOP LEFT OF EVERY PAGE 
+- Pure black or dark navy/white color scheme with strategic accent colors
+- Clean Inter typography throughout
+- Apple-inspired design language
+- Generous white space and clean lines
+- Subtle borders instead of heavy shadows
+
+**Premium Tech Aesthetic:**
+
+- Glassmorphism navigation with backdrop blur
+- Minimal card designs with hover states
+- Clean, professional form styling
+- Sophisticated spacing and typography
+- Ultra-clean social icons and buttons
+
+## 💼 **Elevated Brand Positioning:**
+
+**Premium Messaging:**
+
+- 
+- Professional, sophisticated copy
+- Focus on innovation and technology
+- “Stories That Know They’re Stories” as subtle tagline
+- Emphasis on creative technology company identity
+
+**Streamlined Content:**
+
+- Cleaner, more focused messaging
+- Less cluttered sections
+- Professional tone throughout
+- Technology and innovation emphasis
+- Cross-generational appeal highlighted
+
+## 🚀 **Cutting-Edge Features:**
+
+- Ultra-minimal navigation
+- Clean product grid with color-coded categories
+- Professional contact forms
+- Sophisticated newsletter signup
+- Modern social media integration
+- Smooth interactions and micro-animations
+
+  SItE STRUCTURE:
+📄 Pages & Functional Requirements:
+
+1. Home / Landing Page
+   •	Hero section with artwork/video of Jeffree the Monster
+   •	Tagline: “Stories That Know They’re Stories”
+   •	CTA Buttons: [Explore Jeffree’s World], [Shop Merch], [Join Our List]
+   •	Brief intro to Metafiction Media and the vibe
+
+2. The Metafiction Story
+	- Phil Marquez (owner and Creative Director) ** leave bio information blank until complete and I will provide the text to integrate***
+   •	Brand mission
+   •	long-term vision (use project list to create a compelling vision that fits our direction)
+   •	FULL LOGO IMAGE AT THE BOTTOM showing brand IP
+
+
+3     Jeffree the Monster - Talent Show Magic   (Part 1 Nov-Dec 25, Parts 2-4 2026)
+
+	- **LOGLLINE** A misunderstood teenage puppet-monster struggles to find his place at a new school where the most popular kid is the only other puppet, who is out to make Jeffrey's life miserable. He only friend, Barry, lives next door and together they have to put together a Talent Show set or risk having their reputation forever stained.
+	link to the full website for complete info 
+   •	Image carousel or slideshow of images provided by user
+   •	Tease the interactive app version (voiceover, animation, etc.) to be released following the book 
+	-Preorder Bonus: PDF coloring book, Ultra Limited edition script/sketche version of the book
+
+4.   In Development
+
+  	 - **Yudi the Yogi Uni(corn)*** Spring 2026
+		- Yudi the Yogi's personal journal and instruction manual for how to survive the worst week ever with yoga.
+		- illustrated instruction manual style
+		- fun and light hearted.
+		- Use images provided.
+
+	- **Musicasa **Summer 2026
+		- (Based on the ***ENTIRELY FICTIONAL IN-WORLD*** Anthropomorphic family of Guitars from the Spanish language Kids show, comes a children’s book
+		- include sketch concept art images
+		- "A FAMILY OF GUITARS STRUGGLE TO MAKE MUSIC WHEN THE ELECTRIC KIDS WANT TO PLAY LOUD BUT THE ACOUSTIC PARENTS ARE TOO CLASSICAL TO CHANGE.
+
+	- **Classroom Champion (working title)*** (iPhone/Android game)
+		- ages 6-18 
+		-consisting of mini games set within the context of an elementary school classroom. The mini games consist of marbles, paper, airplane, paper flick, football, hockey sack and later, kickball. 
+		- shared score board and leaderboards for all games
+		- item trading with other players
+		- game currency that is earned through plane that can be used to purchase better upgraded items, abilities, or other bonuses that have to be determined players can compete against the computer or each other and games 
+		- "for keeps mode" allows users to wager items that they have purchased, or won in solo mode,  allowing users to win items from other players.
+		
+
+5. Merch Store
+	- *** ASK FOR THIS DATA BEFORE BEGINNING WORK SO IT WILL connect to existing Shopify store using buy buttons for back end order processing and use images and copy to correspond to the items currently listed 
+
+6. Newsletter
+   •	Email signup CTA for updates on launch of Jeffrey and future projects. Link to MAILCHIMP account with user information ****ASK FOR THIS DATA BEFORE BEGINNING
+   •	Preorder Bonus
+   •	Optional rewards preview
+
+7.   . Contact Page
+   •	Simple contact form (Name, Email, Message)
+   • embedded facebook/Instagram links to the brand profiles and the Jeffrey the monster profiles for each 
+   •	Social icon bar in footer or nav
+
+
+🧠 Extra Notes 
+•	This is a character-driven brand—make room for personality and meta-humor throughout the layout
+•	The design must evoke curiosity and emotional depth without overwhelming the user
+•	Future plans include animated shorts, a mobile game, and live voice puppetry—build with that creative scalability in mind
+ 
+**** Before starting, ask clarifying questions to get information needed if it is not listed, 
+
+Assets directory location  (***Copy or move these into the newly created root directory for the website and ensure the code points to that location*** : /users/Phil/devprojects/github/assets
+
+⸻
+
+Now create the best version of this site you can within your system’s capabilities—don’t hold back. Prioritize clarity, personality, and scalability.
+
