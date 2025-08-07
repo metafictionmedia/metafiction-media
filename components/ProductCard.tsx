@@ -1,5 +1,6 @@
 'use client'
 
+import ShopifyBuyButton from '@/components/ShopifyBuyButton'
 import { Product } from '@/lib/products'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
@@ -7,11 +8,6 @@ import { useState } from 'react'
 export function ProductCard({ product }: { product: Product }) {
   const [imageIndex, setImageIndex] = useState(0)
   const allImages = [product.primaryImage, ...(product.secondaryImages || [])]
-
-  const handleShopifyBuy = () => {
-    const shopifyUrl = `https://metafictionmedia.myshopify.com/cart/add?id=${product.shopifyProductId}`
-    window.open(shopifyUrl, '_blank')
-  }
 
   return (
     <motion.div
@@ -55,12 +51,10 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="text-sm text-foreground/70 line-clamp-3">
             {product.description}
           </p>
-          <button
-            onClick={handleShopifyBuy}
-            className="w-full py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
-          >
-            {product.buttonText}
-          </button>
+          <ShopifyBuyButton 
+  productId={product.shopifyProductId} 
+  buttonText={product.buttonText} 
+/>
         </div>
       </div>
     </motion.div>
