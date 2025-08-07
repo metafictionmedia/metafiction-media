@@ -1,6 +1,6 @@
 'use client'
 
-import ShopifyBuyButton from '@/components/ShopifyBuyButton'
+import ShopifyBuyButton from './ShopifyBuyButton'
 import { Product } from '@/lib/products'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
@@ -52,9 +52,9 @@ export function ProductCard({ product }: { product: Product }) {
             {product.description}
           </p>
           <ShopifyBuyButton 
-  productId={product.shopifyProductId} 
-  buttonText={product.buttonText} 
-/>
+          productId={product.shopifyProductId} 
+          buttonText={product.buttonText} 
+          />
         </div>
       </div>
     </motion.div>
