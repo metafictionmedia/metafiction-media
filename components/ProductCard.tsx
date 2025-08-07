@@ -1,6 +1,7 @@
 'use client'
 
 import ShopifyBuyButton from './ShopifyBuyButton'
+console.log('ShopifyBuyButton:', ShopifyBuyButton);
 import { Product } from '@/lib/products'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
