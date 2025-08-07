@@ -4,7 +4,12 @@ import { useEffect, useRef } from 'react';
 
 declare global {
   interface Window {
-    ShopifyBuy: any;
+    ShopifyBuy: {
+      buildClient: (config: { domain: string; storefrontAccessToken: string }) => any;
+      UI: {
+        onReady: (client: any) => Promise<any>;
+      };
+    };
   }
 }
 
