@@ -22,7 +22,7 @@ function NewsFeed() {
         const response = await fetch('/content/news-feed/main-feed.json')
         if (response.ok) {
           const data = await response.json()
-          setNewsItems(data.slice(0, 5))
+          setNewsItems(data.slice(0, 3)) // Show only 3 items since it's in sidebar
         }
       } catch (error) {
         console.log('News feed not yet available')
@@ -32,32 +32,27 @@ function NewsFeed() {
   }, [])
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.3 }}
-      className="mb-12 max-w-4xl mx-auto"
-    >
-      <h2 className="text-2xl font-semibold mb-6 text-center">Latest News</h2>
-      <div className="space-y-3 min-h-[200px] border border-border rounded-lg p-6">
+    <div className="space-y-3">
+      <h3 className="text-lg font-semibold">Latest News</h3>
+      <div className="space-y-2 min-h-[120px] border border-border rounded-lg p-4">
         {newsItems.length > 0 ? (
           newsItems.map((item, index) => (
             <Link 
               key={index} 
               href={`/news/${item.id}`}
-              className="block p-4 border border-border rounded-lg hover:bg-secondary transition-colors"
+              className="block p-3 border border-border rounded-lg hover:bg-secondary transition-colors"
             >
-              <h3 className="font-medium mb-1">{item.title}</h3>
-              <p className="text-sm text-foreground/70">{item.excerpt}</p>
+              <h4 className="font-medium text-sm mb-1">{item.title}</h4>
+              <p className="text-xs text-foreground/70">{item.excerpt}</p>
             </Link>
           ))
         ) : (
           <div className="flex items-center justify-center h-full text-foreground/50">
-            <p>News updates will appear here</p>
+            <p className="text-sm">News updates will appear here</p>
           </div>
         )}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -65,8 +60,18 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-20">
       <div className="max-w-7xl mx-auto w-full">
+        {/* Company Slogan - Above everything */}
+<motion.div
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="text-center mb-12"
+>
+  <p className="text-xl lg:text-2xl text-foreground/80 font-light">
+    Stories That Know They Are Stories
+  </p>
+</motion.div>
         {/* News Feed Section */}
-        <NewsFeed />
 
         {/* Original Grid Layout */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -84,9 +89,7 @@ export default function HomePage() {
                   className="w-full max-w-xl lg:max-w-2xl h-auto dark:invert dark:brightness-75 dark:contrast-125"
                 />
               </div>
-              <p className="text-xl lg:text-2xl text-foreground/80 font-light">
-                Stories That Know They Are Stories
-              </p>
+              <NewsFeed />
             </div>
 
             <p className="text-lg text-foreground/70 leading-relaxed">
