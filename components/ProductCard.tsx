@@ -49,7 +49,7 @@ export function ProductCard({ product }: { product: Product }) {
             </span>
             <h3 className="text-xl font-semibold mt-3">{product.title}</h3>
           </div>
-          <p className="text-sm text-foreground/70 line-clamp-3">
+          <p className="text-sm text-foreground/70">
             {product.description}
           </p>
           <ShopifyBuyButton 
