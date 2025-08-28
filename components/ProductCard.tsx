@@ -1,5 +1,6 @@
 'use client'
 
+import { Lightbox } from './Lightbox'
 import ShopifyBuyButton from './ShopifyBuyButton'
 console.log('ShopifyBuyButton:', ShopifyBuyButton);
 import { Product } from '@/lib/products'
@@ -8,6 +9,7 @@ import { useState } from 'react'
 
 export function ProductCard({ product }: { product: Product }) {
   const [imageIndex, setImageIndex] = useState(0)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
   const allImages = [product.primaryImage, ...(product.secondaryImages || [])]
 
   return (
@@ -23,6 +25,7 @@ export function ProductCard({ product }: { product: Product }) {
             src={allImages[imageIndex].src} 
             alt={allImages[imageIndex].alt}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            onClick={() => setLightboxOpen(true)}
           />
           {allImages.length > 1 && (
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
@@ -58,6 +61,12 @@ export function ProductCard({ product }: { product: Product }) {
           />
         </div>
       </div>
+      <Lightbox
+  isOpen={lightboxOpen}
+  imageSrc={allImages[imageIndex].src}
+  imageAlt={allImages[imageIndex].alt}
+  onClose={() => setLightboxOpen(false)}
+/>
     </motion.div>
   )
 }
