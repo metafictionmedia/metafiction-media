@@ -27,7 +27,7 @@ const projects = [
     platform: 'Mobile',
     ageRange: 'Ages 6-18',
     season: 'In Early Development',
-    description: 'Mini-games set within an elementary school classroom context.',
+    description: 'Mini-games set in the Jeffrey the Monster universe. Beat Jeffrey and friends at their own games, or play as them in multiplayer for keeps.',
     features: [
       'Games include: marbles, paper airplane, paper flick football, hockey sack, kickball',
       'Shared scoreboard and leaderboards across all games',
