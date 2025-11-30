@@ -25,7 +25,7 @@ export default function BehindTheScenesPage() {
           const data = await response.json()
           setBtsItems(data)
         }
-      } catch (error) {
+      } catch {
         console.log('BTS content not yet available')
       }
     }

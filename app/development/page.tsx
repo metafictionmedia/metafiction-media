@@ -57,7 +57,7 @@ export default function DevelopmentPage() {
             </p>
             <div className="max-w-2xl mx-auto mt-6 p-4 bg-primary/10 border border-primary/20 rounded-lg">
               <p className="text-sm text-foreground/80">
-                <span className="font-semibold text-primary">Current Focus:</span> Jeffrey the Monster is our primary project. These upcoming projects are in early development and will be pursued after Jeffrey's completion.
+                <span className="font-semibold text-primary">Current Focus:</span> Jeffrey the Monster is our primary project. These upcoming projects are in early development and will be pursued after Jeffrey&apos;s completion.
               </p>
             </div>
           </div>

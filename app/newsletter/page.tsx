@@ -69,7 +69,7 @@ export default function NewsletterPage() {
           <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-purple-600/10 rounded-2xl">
             <h2 className="text-2xl font-bold mb-4 text-center">Limited Edition Drawing!</h2>
             <p className="text-center max-w-2xl mx-auto text-foreground/80">
-              Sign up for our email list to be automatically entered into a drawing! <span className="font-bold text-primary">Three (3) random winners</span> will receive an exclusive, limited-edition script/concept art draft version of the book when they purchase the official graphic novel. This collector's edition includes the original script and rough panel artwork, revealing the creative journey from concept to final page. Winners who preorder will receive both items early, while all winners are guaranteed the limited edition draft regardless of when they purchase!
+              Sign up for our email list to be automatically entered into a drawing! <span className="font-bold text-primary">Three (3) random winners</span> will receive an exclusive, limited-edition script/concept art draft version of the book when they purchase the official graphic novel. This collector&apos;s edition includes the original script and rough panel artwork, revealing the creative journey from concept to final page. Winners who preorder will receive both items early, while all winners are guaranteed the limited edition draft regardless of when they purchase!
             </p>
           </div>
         </motion.div>

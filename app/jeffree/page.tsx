@@ -26,7 +26,7 @@ export default function JeffreePage() {
           <div className="bg-secondary/50 p-8 rounded-xl">
             <p className="text-lg text-center mb-4">
               A misunderstood teenage puppet-monster struggles to find his place at a new school
-              where the most popular kid is the only other puppet, who is out to make Jeffrey's
+              where the most popular kid is the only other puppet, who is out to make Jeffrey&apos;s
               life miserable.
             </p>
             <div className="text-center">
@@ -56,7 +56,7 @@ export default function JeffreePage() {
                 <h2 className="text-2xl font-bold">Comic Strips</h2>
               </div>
               <p className="text-foreground/70">
-                Follow Jeffrey's hilarious misadventures in bite-sized comic strip stories.
+                Follow Jeffrey&apos;s hilarious misadventures in bite-sized comic strip stories.
                 New strips posted regularly!
               </p>
               <Link
@@ -101,7 +101,7 @@ export default function JeffreePage() {
           <div className="text-center p-8 bg-gradient-to-br from-primary/10 to-purple-600/10 rounded-2xl">
             <h3 className="text-2xl font-bold mb-4">Interactive Experience Coming Soon</h3>
             <p className="text-foreground/70 max-w-2xl mx-auto">
-              Experience Jeffrey's world like never before with our upcoming interactive
+              Experience Jeffrey&apos;s world like never before with our upcoming interactive
               app featuring full voiceover narration and stunning animations.
             </p>
           </div>

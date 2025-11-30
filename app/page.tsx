@@ -30,7 +30,7 @@ function NewsFeed() {
           const data = await response.json()
           setNewsItems(data.slice(0, 3)) // Show only 3 items since it's in sidebar
         }
-      } catch (error) {
+      } catch {
         console.log('News feed not yet available')
       }
     }
