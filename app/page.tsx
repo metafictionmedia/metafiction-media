@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import ComicShowcase from '@/components/ComicShowcase'
+import { comicStrips } from '@/lib/comics'
 
 interface NewsItem {
   id: string;
@@ -11,6 +13,10 @@ interface NewsItem {
   excerpt: string;
   content?: string;
   date?: string;
+  image?: string;
+  videoUrl?: string;
+  embedUrl?: string;
+  linkUrl?: string;
 }
 
 function NewsFeed() {
@@ -37,14 +43,45 @@ function NewsFeed() {
       <div className="space-y-2 min-h-[120px] border border-border rounded-lg p-4">
         {newsItems.length > 0 ? (
           newsItems.map((item, index) => (
-            <Link 
-              key={index} 
-              href={`/news/${item.id}`}
-              className="block p-3 border border-border rounded-lg hover:bg-secondary transition-colors"
+            <div
+              key={index}
+              className="p-3 border border-border rounded-lg hover:bg-secondary transition-colors"
             >
+              {item.image && (
+                <div className="relative w-full h-32 mb-2 rounded overflow-hidden">
+                  <img src={item.image} alt={item.title} className="object-cover w-full h-full" />
+                </div>
+              )}
+              {item.videoUrl && (
+                <div className="mb-2">
+                  <video controls className="w-full rounded" preload="metadata">
+                    <source src={item.videoUrl} type="video/mp4" />
+                  </video>
+                </div>
+              )}
+              {item.embedUrl && (
+                <div className="mb-2">
+                  <iframe
+                    src={item.embedUrl}
+                    className="w-full h-48 rounded"
+                    frameBorder="0"
+                    allowFullScreen
+                  />
+                </div>
+              )}
               <h4 className="font-medium text-sm mb-1">{item.title}</h4>
               <p className="text-xs text-foreground/70">{item.excerpt}</p>
-            </Link>
+              {item.linkUrl && (
+                <a
+                  href={item.linkUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-1 text-primary hover:underline text-xs font-semibold"
+                >
+                  View More →
+                </a>
+              )}
+            </div>
           ))
         ) : (
           <div className="flex items-center justify-center h-full text-foreground/50">
@@ -125,16 +162,9 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative h-[600px]"
           >
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-purple-600/20 p-1">
-              <img 
-                src="/assets/jeffree/hero-artwork.jpg" 
-                alt="Jeffree the Monster" 
-                className="w-full h-full object-cover rounded-xl"
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-primary to-purple-600 rounded-full blur-3xl opacity-50" />
+            <ComicShowcase comics={comicStrips} />
           </motion.div>
         </div>
       </div>

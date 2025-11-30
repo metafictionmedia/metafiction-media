@@ -67,25 +67,10 @@ export default function NewsletterPage() {
           <NewsletterForm />
 
           <div className="mt-16 p-8 bg-gradient-to-br from-primary/10 to-purple-600/10 rounded-2xl">
-            <h2 className="text-2xl font-bold mb-4 text-center">Preorder Bonus Preview</h2>
-            <ul className="space-y-3 max-w-2xl mx-auto">
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">✓</span>
-                <span>Exclusive PDF coloring book featuring all main characters</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">✓</span>
-                <span>Limited edition script/sketch versions of upcoming books</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">✓</span>
-                <span>Early beta access to interactive apps and games</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">✓</span>
-                <span>Monthly creative insights from Phil Marquez</span>
-              </li>
-            </ul>
+            <h2 className="text-2xl font-bold mb-4 text-center">Limited Edition Drawing!</h2>
+            <p className="text-center max-w-2xl mx-auto text-foreground/80">
+              Sign up for our email list to be automatically entered into a drawing! <span className="font-bold text-primary">Three (3) random winners</span> will receive an exclusive, limited-edition script/concept art draft version of the book when they purchase the official graphic novel. This collector's edition includes the original script and rough panel artwork, revealing the creative journey from concept to final page. Winners who preorder will receive both items early, while all winners are guaranteed the limited edition draft regardless of when they purchase!
+            </p>
           </div>
         </motion.div>
       </div>

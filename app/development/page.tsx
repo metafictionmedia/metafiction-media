@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const projects = [
   {
     title: 'Yudi the Yogi Uni(corn)',
-    season: 'Spring 2026',
+    season: 'Following Jeffrey the Monster completion',
     description: "Yudi the Yogi personal journal and instruction manual for how to survive the worst week ever with yoga.",
     features: [
       'Illustrated instruction manual style',
@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: 'Musicasa',
-    season: 'Summer 2026',
+    season: '2027 or later',
     description: 'Based on the entirely fictional in-world anthropomorphic family of guitars from the Spanish language kids show.',
     tagline: 'A FAMILY OF GUITARS STRUGGLE TO MAKE MUSIC WHEN THE ELECTRIC KIDS WANT TO PLAY LOUD BUT THE ACOUSTIC PARENTS ARE TOO CLASSICAL TO CHANGE.',
     image: '/assets/musicasa/concept-sketch.jpg'
@@ -26,6 +26,7 @@ const projects = [
     subtitle: '(iPhone/Android Game)',
     platform: 'Mobile',
     ageRange: 'Ages 6-18',
+    season: 'In Early Development',
     description: 'Mini-games set within an elementary school classroom context.',
     features: [
       'Games include: marbles, paper airplane, paper flick football, hockey sack, kickball',
@@ -54,6 +55,11 @@ export default function DevelopmentPage() {
             <p className="text-xl text-foreground/70">
               The next chapters in our metafictional universe
             </p>
+            <div className="max-w-2xl mx-auto mt-6 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+              <p className="text-sm text-foreground/80">
+                <span className="font-semibold text-primary">Current Focus:</span> Jeffrey the Monster is our primary project. These upcoming projects are in early development and will be pursued after Jeffrey's completion.
+              </p>
+            </div>
           </div>
 
           <div className="space-y-16">
@@ -131,6 +137,9 @@ export default function DevelopmentPage() {
               <div className="space-y-6">
                 <div className="flex items-start justify-between flex-wrap gap-4">
                   <div>
+                    <div className="inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-sm mb-3">
+                      {projects[2].season}
+                    </div>
                     <h2 className="text-3xl font-bold">{projects[2].title}</h2>
                     <p className="text-lg text-foreground/60">{projects[2].subtitle}</p>
                   </div>

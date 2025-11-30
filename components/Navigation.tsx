@@ -13,8 +13,7 @@ const navItems = [
   { href: '/jeffree', label: 'Jeffree' },
   { href: '/development', label: 'In Development' },
   { href: '/store', label: 'Store' },
-  { href: '/behind-the-scenes', label: 'Behind the Scenes' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/newsletter', label: 'Sign Up' },
 ]
 
 export function Navigation() {
