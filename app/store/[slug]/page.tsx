@@ -1,13 +1,12 @@
 'use client'
 
 import { useEffect } from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import { shopifyProducts } from '@/lib/shopify-products'
 import Link from 'next/link'
 
 export default function ProductPage() {
   const params = useParams()
-  const router = useRouter()
   const slug = params.slug as string
 
   const product = shopifyProducts.find(p => p.slug === slug)
@@ -33,7 +32,7 @@ export default function ProductPage() {
         storefrontAccessToken: 'd9d8cc505f2ddcf4f7e5fa25779122eb',
       })
 
-      window.ShopifyBuy.UI.onReady(client).then(function (ui: any) {
+      window.ShopifyBuy.UI.onReady(client).then(function (ui) {
         ui.createComponent('product', {
           id: product!.shopifyId,
           node: document.getElementById(product!.componentId),
@@ -248,10 +247,4 @@ export default function ProductPage() {
       </div>
     </div>
   )
-}
-
-declare global {
-  interface Window {
-    ShopifyBuy: any
-  }
 }
