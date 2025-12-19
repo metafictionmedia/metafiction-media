@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import { shopifyProducts } from '@/lib/shopify-products'
 import Link from 'next/link'
@@ -8,8 +8,26 @@ import Link from 'next/link'
 export default function ProductPage() {
   const params = useParams()
   const slug = params.slug as string
+  const [isDark, setIsDark] = useState(false)
 
   const product = shopifyProducts.find(p => p.slug === slug)
+
+  useEffect(() => {
+    // Detect initial dark mode
+    setIsDark(document.documentElement.classList.contains('dark'))
+
+    // Watch for dark mode changes
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains('dark'))
+    })
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     if (!product) return
@@ -51,7 +69,7 @@ export default function ProductPage() {
                 },
                 title: {
                   'font-size': '26px',
-                  'color': '#e5e7eb'
+                  'color': isDark ? '#ffffff' : '#1a1a1a'
                 },
                 button: {
                   'font-family': 'Lato, sans-serif',
@@ -76,18 +94,18 @@ export default function ProductPage() {
                 },
                 price: {
                   'font-size': '18px',
-                  'color': '#e5e7eb'
+                  'color': isDark ? '#ffffff' : '#1a1a1a'
                 },
                 compareAt: {
                   'font-size': '15.299999999999999px',
-                  'color': '#e5e7eb'
+                  'color': isDark ? '#ffffff' : '#1a1a1a'
                 },
                 unitPrice: {
                   'font-size': '15.299999999999999px',
-                  'color': '#e5e7eb'
+                  'color': isDark ? '#ffffff' : '#1a1a1a'
                 },
                 description: {
-                  'color': '#e5e7eb'
+                  'color': isDark ? '#ffffff' : '#1a1a1a'
                 }
               },
               layout: 'vertical',
@@ -204,7 +222,7 @@ export default function ProductPage() {
         document.body.removeChild(script)
       }
     }
-  }, [product])
+  }, [product, isDark])
 
   if (!product) {
     return (
