@@ -45,6 +45,12 @@ export default function ProductPage() {
         return
       }
 
+      // Clear existing content to prevent duplicates
+      const container = document.getElementById(product!.componentId)
+      if (container) {
+        container.innerHTML = ''
+      }
+
       const client = window.ShopifyBuy.buildClient({
         domain: 'fkaakn-yd.myshopify.com',
         storefrontAccessToken: 'd9d8cc505f2ddcf4f7e5fa25779122eb',
@@ -53,7 +59,7 @@ export default function ProductPage() {
       window.ShopifyBuy.UI.onReady(client).then(function (ui) {
         ui.createComponent('product', {
           id: product!.shopifyId,
-          node: document.getElementById(product!.componentId),
+          node: container,
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
             product: {
