@@ -62,5 +62,14 @@ export const shopifyProducts: ShopifyProduct[] = [
     name: 'Product 6',
     description: 'Description will be loaded from Shopify',
     category: 'yudy'
+  },
+  {
+    id: '7',
+    shopifyId: '7947999674447',
+    componentId: 'product-component-1766167196837',
+    slug: 'product-7',
+    name: 'Product 7',
+    description: 'Description will be loaded from Shopify',
+    category: 'yudy'
   }
 ]
