@@ -232,13 +232,8 @@ export default function ProductPage() {
       </div>
 
       <style jsx global>{`
-        .dark [id^="product-component"] .shopify-buy__product__title,
-        .dark [id^="product-component"] .shopify-buy__product__price,
-        .dark [id^="product-component"] .shopify-buy__product__variant-title,
-        .dark [id^="product-component"] .shopify-buy__product__description,
-        .dark [id^="product-component"] .shopify-buy__option-select__label,
-        .dark [id^="product-component"] .shopify-buy__product__compare-at,
-        .dark [id^="product-component"] .shopify-buy__product__unit-price {
+        /* Force white text for all Shopify elements in dark mode */
+        .dark [id^="product-component"] *:not(button):not(input) {
           color: #ffffff !important;
         }
         .dark [id^="product-component"] .shopify-buy__product,
@@ -247,6 +242,12 @@ export default function ProductPage() {
           background-color: transparent !important;
         }
         .dark [id^="product-component"] select {
+          background-color: #374151 !important;
+          color: #ffffff !important;
+          border-color: #6b7280 !important;
+        }
+        .dark [id^="product-component"] .shopify-buy__quantity-decrement,
+        .dark [id^="product-component"] .shopify-buy__quantity-increment {
           background-color: #374151 !important;
           color: #ffffff !important;
         }
