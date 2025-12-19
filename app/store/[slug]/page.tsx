@@ -46,11 +46,11 @@ export default function ProductPage() {
                     'margin-left': '0',
                     'margin-bottom': '50px'
                   },
-                  'text-align': 'left'
+                  'text-align': 'left',
+                  'background': 'transparent'
                 },
                 title: {
-                  'font-size': '26px',
-                  'color': '#ffffff'
+                  'font-size': '26px'
                 },
                 button: {
                   'font-family': 'Lato, sans-serif',
@@ -74,20 +74,15 @@ export default function ProductPage() {
                   'padding-bottom': '17px'
                 },
                 price: {
-                  'font-size': '18px',
-                  'color': '#ffffff'
+                  'font-size': '18px'
                 },
                 compareAt: {
-                  'font-size': '15.299999999999999px',
-                  'color': '#ffffff'
+                  'font-size': '15.299999999999999px'
                 },
                 unitPrice: {
-                  'font-size': '15.299999999999999px',
-                  'color': '#ffffff'
+                  'font-size': '15.299999999999999px'
                 },
-                description: {
-                  'color': '#ffffff'
-                }
+                description: {}
               },
               layout: 'vertical',
               contents: {
@@ -134,15 +129,9 @@ export default function ProductPage() {
                   'padding-left': '50px',
                   'padding-right': '50px'
                 },
-                title: {
-                  'color': '#ffffff'
-                },
-                price: {
-                  'color': '#ffffff'
-                },
-                description: {
-                  'color': '#ffffff'
-                }
+                title: {},
+                price: {},
+                description: {}
               },
               googleFonts: ['Lato'],
               text: {
@@ -151,12 +140,8 @@ export default function ProductPage() {
             },
             option: {
               styles: {
-                label: {
-                  'color': '#ffffff'
-                },
-                select: {
-                  'color': '#000000'
-                }
+                label: {},
+                select: {}
               }
             },
             cart: {
