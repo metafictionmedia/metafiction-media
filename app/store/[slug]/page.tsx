@@ -50,8 +50,7 @@ export default function ProductPage() {
                   'background': 'transparent'
                 },
                 title: {
-                  'font-size': '26px',
-                  'color': '#1a1a1a'
+                  'font-size': '26px'
                 },
                 button: {
                   'font-family': 'Lato, sans-serif',
@@ -75,20 +74,15 @@ export default function ProductPage() {
                   'padding-bottom': '17px'
                 },
                 price: {
-                  'font-size': '18px',
-                  'color': '#1a1a1a'
+                  'font-size': '18px'
                 },
                 compareAt: {
-                  'font-size': '15.299999999999999px',
-                  'color': '#1a1a1a'
+                  'font-size': '15.299999999999999px'
                 },
                 unitPrice: {
-                  'font-size': '15.299999999999999px',
-                  'color': '#1a1a1a'
+                  'font-size': '15.299999999999999px'
                 },
-                description: {
-                  'color': '#1a1a1a'
-                }
+                description: {}
               },
               layout: 'vertical',
               contents: {
@@ -245,6 +239,15 @@ export default function ProductPage() {
         .dark [id^="product-component"] .shopify-buy__option-select__label,
         .dark [id^="product-component"] .shopify-buy__product__compare-at,
         .dark [id^="product-component"] .shopify-buy__product__unit-price {
+          color: #ffffff !important;
+        }
+        .dark [id^="product-component"] .shopify-buy__product,
+        .dark [id^="product-component"] .shopify-buy__product__variant-selectors,
+        .dark [id^="product-component"] .shopify-buy__option-select {
+          background-color: transparent !important;
+        }
+        .dark [id^="product-component"] select {
+          background-color: #374151 !important;
           color: #ffffff !important;
         }
       `}</style>
