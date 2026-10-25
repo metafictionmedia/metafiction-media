@@ -216,13 +216,15 @@ img { max-width: 100%; display: block; }
 .mps-intro { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 4vw; align-items: center; margin-bottom: 90px; }
 .mps-intro .label { margin-top: 12px; display: inline-block; border: 1.5px dashed var(--pencil); border-radius: 4px; padding: 6px 10px; }
 .mps-reel { display: flex; flex-direction: column; gap: 14vh; }
-.mps-reel .cut-window { width: 82%; aspect-ratio: 1529 / 854; background: #141219; }
-.mps-reel .cut-window:nth-child(even) { align-self: flex-end; }
-.mps-reel .cut-window:first-child { aspect-ratio: 1024 / 576; }
+.mps-frame { position: relative; width: 82%; margin: 0; }
+.mps-frame.mps-right { align-self: flex-end; }
+.mps-reel .cut-window { width: 100%; aspect-ratio: 1529 / 854; background: #141219; }
+.mps-frame:first-child .cut-window { aspect-ratio: 1024 / 576; }
 @media (max-width: 760px) {
   .mps-intro { grid-template-columns: 1fr; margin-bottom: 50px; }
   .mps-reel { gap: 7vh; }
-  .mps-reel .cut-window { width: 100%; }
+  .mps-frame { width: 100%; }
+  .mps-note, .mps-connector { display: none; }
 }
 
 /* Home: cut-window image and Post-it link to Meta Prompt Studio */
@@ -230,3 +232,20 @@ img { max-width: 100%; display: block; }
 .home-window.home-link > .cut-window { width: 100%; height: 100%; }
 .home-link:hover .cut-window, .home-link:hover .postit { filter: brightness(1.03); }
 .home-link:focus-visible { outline: 2px dashed var(--ink); outline-offset: 4px; }
+
+/* MPS page: pencil mark-up in the margins (subtle) */
+.mps-note { position: absolute; top: 18%; bottom: 18%; width: calc(100% / 82 * 18 - 3vw); display: flex; align-items: center; gap: 10px; color: var(--pencil); pointer-events: none; }
+.mps-note-left { left: calc(100% + 1.4vw); }
+.mps-note-right { right: calc(100% + 1.4vw); flex-direction: row-reverse; text-align: right; }
+.mps-bracket { flex: 0 0 14px; width: 14px; height: 100%; overflow: visible; }
+.mps-note-right .mps-bracket { transform: scaleX(-1); }
+.mps-bracket path, .mps-scribble path, .mps-connector path { fill: none; stroke: var(--pencil); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; opacity: .75; }
+.mps-note-text { position: relative; font: 500 14px/1.35 var(--font-sans); letter-spacing: .01em; max-width: 13ch; transform: rotate(-2.5deg); }
+.mps-note-right .mps-note-text { transform: rotate(2deg); }
+.mps-scribble { display: block; width: 80%; height: 7px; margin-top: 4px; overflow: visible; }
+.mps-note-right .mps-scribble { margin-left: auto; }
+.mps-connector { position: absolute; top: 100%; height: 14vh; width: calc(100% / 82 * 100); overflow: visible; pointer-events: none; }
+.mps-connector-left { left: 0; }
+.mps-connector-right { right: 0; }
+.mps-connector path { stroke-dasharray: 5 7; opacity: .6; }
+@media (max-width: 1100px) { .mps-note-text { font-size: 12px; } }
