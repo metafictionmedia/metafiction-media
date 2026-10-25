@@ -224,3 +224,9 @@ img { max-width: 100%; display: block; }
   .mps-reel { gap: 7vh; }
   .mps-reel .cut-window { width: 100%; }
 }
+
+/* Home: cut-window image and Post-it link to Meta Prompt Studio */
+.home-link { display: block; color: inherit; text-decoration: none; cursor: pointer; }
+.home-window.home-link > .cut-window { width: 100%; height: 100%; }
+.home-link:hover .cut-window, .home-link:hover .postit { filter: brightness(1.03); }
+.home-link:focus-visible { outline: 2px dashed var(--ink); outline-offset: 4px; }
