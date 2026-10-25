@@ -249,3 +249,31 @@ img { max-width: 100%; display: block; }
 .mps-connector-right { right: 0; }
 .mps-connector path { stroke-dasharray: 5 7; opacity: .6; }
 @media (max-width: 1100px) { .mps-note-text { font-size: 12px; } }
+
+/* ===== Dark mode: chalkboard (follows the device setting) ===== */
+:root { color-scheme: light dark; }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #2b3631;      /* chalkboard slate, not black */
+    --paper-2: #33403a;
+    --ink: #eeede6;        /* chalk */
+    --ink-soft: #c3c8c0;
+    --pencil: #9aa69f;
+    --hole-shadow: inset 0 0 0 1px rgba(0, 0, 0, .45), inset 8px 10px 22px rgba(0, 0, 0, .55), inset -3px -3px 10px rgba(0, 0, 0, .25);
+  }
+  body {
+    background-image:
+      radial-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
+      radial-gradient(rgba(255, 255, 255, .022) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255, 255, 255, .025), rgba(0, 0, 0, .08));
+  }
+  /* Post-its, buttons and form fields keep their own paper colors with dark ink */
+  .postit, .postit * { color: #1d1c1a; }
+  .paper-button { color: #1d1c1a; }
+  .newsletter-form input[type=email] { color: #1d1c1a; }
+  .appstore-badge { border-color: rgba(255, 255, 255, .35); }
+  .pulltab, .pulltab-sheet, .paper-card { border-color: rgba(255, 255, 255, .12); }
+  .pulltab-sheet li + li { border-top-color: rgba(255, 255, 255, .16); }
+  .topbar-logo img { filter: invert(1) brightness(.93); }
+  .skeleton { background: repeating-linear-gradient(-45deg, #33403a 0 10px, #2f3b35 10px 20px); }
+}
